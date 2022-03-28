@@ -14,9 +14,7 @@ std = X.std()
 
 X = (X-u)/std
 
-# plt.style.use('seaborn')
-# plt.scatter(X,Y,color='red')
-# plt.show()
+
 
 def hypothesis(x,theta):
     y_ = theta[0]+theta[1]*x
@@ -56,14 +54,10 @@ def GradientDescent(X,Y,max_step=100,learning_rate=0.1):
 
 
 theta,errorlist,theta_list = GradientDescent(X,y)
-#
-#
+
+
 y_ = hypothesis(X,theta)
-#
-# plt.scatter(X,y)
-# plt.plot(X,y_,color='black',label='Prediction')
-# plt.legend()
-# plt.show()
+
 
 
 X_test = pd.read_csv("D:\yadav\Coding Blocks\Machine Learning\Challenge - Hardwork Pays off\Test\Linear_X_Test.csv").values
@@ -97,8 +91,4 @@ axes.scatter(theta_list[:,0],theta_list[:,1],*errorlist)
 plt.show()
 
 theta_list = np.array(theta_list)
-#
-# plt.plot(theta_list[:,0],label='Theta0')
-# plt.plot(theta_list[:,1],label='Theta1')
-# plt.legend()
-# plt.show()
+
